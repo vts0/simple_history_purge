@@ -6,8 +6,14 @@
   <style>
     body{font-family:sans-serif;margin:12px}
     .val{margin-left:4px;font-weight:bold;color:#1a73e8}
-    #status{margin:8px 0;font-weight:bold;display:flex;align-items:center}
-    #badge{margin-left:6px;padding:2px 6px;border-radius:10px;font-size:11px;color:#fff}
+    #statusLine{display:flex;align-items:center;margin:8px 0;font-weight:bold}
+    #badge{
+      padding:2px 6px;
+      border-radius:10px;
+      font-size:11px;
+      color:#fff;
+      margin-right:6px;
+    }
     .on{background:#34a853}
     .off{background:#ea4335}
     button{width:100%;margin:4px 0;padding:6px 12px;border:none;border-radius:4px;color:#fff;font-size:14px;cursor:pointer}
@@ -29,6 +35,10 @@
 
   <button id="save">Save</button>
 
+  <div id="statusLine">
+    <span id="badge" class="on"></span>
+    <span id="statusText">Running</span>
+  </div>
   <div>Total purges: <span id="purgeVal" class="val"></span></div>
 
   <button id="start">Start</button>
