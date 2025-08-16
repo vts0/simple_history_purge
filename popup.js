@@ -17,8 +17,9 @@ function render({ limit, intervalSec, enabled, purgeCount = 0 }) {
   intervalVal.textContent = `(current: ${intervalSec}s)`;
   purgeVal.textContent = purgeCount;
 
-  badge.textContent = enabled ? "Running" : "Stopped";
   badge.className = enabled ? "on" : "off";
+  badge.textContent = "";
+  statusText.textContent = enabled ? "Running" : "Stopped";
 
   startBtn.disabled = enabled;
   stopBtn.disabled = !enabled;
