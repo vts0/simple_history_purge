@@ -3,7 +3,8 @@
   "description": "Auto-purges history when the number of visits exceeds a user-defined limit.",
   "version": "1.0",
   "manifest_version": 3,
-  "permissions": ["history", "storage"],
+  "permissions": ["history", "storage", "alarms"],
   "action": { "default_popup": "popup.html" },
   "background": { "service_worker": "background.js" }
 }
+
